@@ -107,6 +107,7 @@ footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;just
 @keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @media(max-width:1024px){#hero{grid-template-columns:1fr}.hl{padding:7rem 2rem 3rem}.hl::after{display:none}.hr{padding:3rem 2rem 5rem}.vis-strip{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr}.quick-nav{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.nav-links{display:none}.quick-nav{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.proj-grid{grid-template-columns:1fr!important}}
 </style></head>
 <body>
 <div class="cg" id="cg"></div><nav><a href="index.html" class="nav-logo">Meredith<span>.</span></a><ul class="nav-links"><li><a href="index.html" class="active" >Home</a></li>
@@ -216,7 +217,7 @@ footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;just
     <div class="ey reveal"><div class="ey-dot"></div><span class="ey-txt" style="color:var(--sage)">Featured Work</span></div>
     <h2 class="s-title reveal">Academic Projects &amp; <em>Case Studies</em></h2>
     <div class="divider reveal"></div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
+    <div class="proj-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
 
       <a href="projects.html" style="text-decoration:none">
         <div style="background:linear-gradient(145deg,#1A3829,#2C5F47);padding:2.5rem;height:280px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .3s" class="reveal" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'">
@@ -302,5 +303,6 @@ footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;just
   document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
   document.querySelectorAll('.skill-bar').forEach(el=>{new IntersectionObserver(e=>{if(e[0].isIntersecting)el.classList.add('on')},{threshold:.3}).observe(el)});
 </script>
+<script src="nav-fix.js"></script>
 </body>
 </html>
