@@ -218,4 +218,5 @@ footer{background:#091410;padding:2.2rem 6rem;display:flex;align-items:center;ju
   const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*70);obs.unobserve(e.target)}});},{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<script src="nav-fix.js"></script>
 </body></html>
