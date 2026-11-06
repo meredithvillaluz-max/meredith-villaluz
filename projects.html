@@ -242,10 +242,10 @@ footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;just
       <div class="section-block" style="border-bottom:none;padding-bottom:0">
         <div class="section-title"><span class="section-icon">📚</span> Deliverables</div>
         <div class="dl-row">
-          <a href="#" class="dl-btn solid">📄 Full Research Paper (45 pages)</a>
-          <a href="#" class="dl-btn ghost">📊 Presentation Slides (15 slides)</a>
-          <a href="#" class="dl-btn ghost">📋 Executive Summary</a>
-          <a href="#" class="dl-btn ghost">🎓 FIRSM Framework Document</a>
+          <a href="URC_Financial_Inclusion_Research_Paper.docx" class="dl-btn solid" download>📄 Full Research Paper (45 pages)</a>
+          <a href="URC_Financial_Inclusion_Presentation.pptx" class="dl-btn ghost" download>📊 Presentation Slides (15 slides)</a>
+          
+          
         </div>
       </div>
     </div>
@@ -359,9 +359,9 @@ footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;just
       <div class="section-block" style="border-bottom:none;padding-bottom:0">
         <div class="section-title"><span class="section-icon">📚</span> Deliverables</div>
         <div class="dl-row">
-          <a href="#" class="dl-btn solid">📄 Full Investment Report (28 pages)</a>
-          <a href="#" class="dl-btn ghost">📊 DCF Model & Sensitivity</a>
-          <a href="#" class="dl-btn ghost">📈 Presentation Slides</a>
+          <a href="FIN360_Investment_Proposal_Report.docx" class="dl-btn solid" download>📄 Full Investment Report (28 pages)</a>
+          
+          <a href="FIN360_Investment_Proposal_Slides.pptx" class="dl-btn ghost" download>📈 Presentation Slides</a>
         </div>
       </div>
     </div>
@@ -491,9 +491,9 @@ footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;just
       <div class="section-block" style="border-bottom:none;padding-bottom:0">
         <div class="section-title"><span class="section-icon">📚</span> Deliverables</div>
         <div class="dl-row">
-          <a href="#" class="dl-btn solid">📄 Full Financial Analysis (22 pages)</a>
-          <a href="#" class="dl-btn ghost">📊 Financial Statements &amp; Ratios</a>
-          <a href="#" class="dl-btn ghost">📈 Trend Charts &amp; Workbook</a>
+          <a href="BUSM301_Hershey_Company_Report.docx" class="dl-btn solid" download>📄 Full Financial Analysis (22 pages)</a>
+          
+          
         </div>
       </div>
     </div>
@@ -517,5 +517,6 @@ footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;just
   const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*75);obs.unobserve(e.target)}});},{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<script src="nav-fix.js"></script>
 </body>
 </html>
