@@ -65,10 +65,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:cen
 .tl-desc ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
 .tl-desc ul li::before{content:'—';color:var(--gold);margin-right:.5rem;font-size:.7rem}
 /* SKILL BARS */
-.skill-row{margin-bottom:1.3rem}
-.skill-labels{display:flex;justify-content:space-between;font-size:.82rem;font-weight:500;margin-bottom:.45rem;color:var(--ink)}
-.skill-track{height:3px;background:rgba(27,56,41,.1);border-radius:2px;overflow:hidden}
-.skill-bar{height:100%;background:linear-gradient(90deg,var(--forest),var(--sage));border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.4,0,.2,1)}
+.skill-row{margin-bottom:1.4rem;max-width:560px}
+.skill-labels{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-size:.85rem;font-weight:500;margin-bottom:.5rem;color:var(--ink)}
+.skill-labels span:last-child{font-weight:600;color:var(--green);font-variant-numeric:tabular-nums}
+.skill-track{height:8px;background:rgba(27,56,41,.1);border-radius:999px;overflow:hidden}
+.skill-bar{height:100%;background:linear-gradient(90deg,var(--forest),var(--sage));border-radius:999px;transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.4,0,.2,1)}
 .skill-bar.on{transform:scaleX(1)}
 /* FOOTER */
 footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.05);margin-top:0}
@@ -171,7 +172,8 @@ footer{background:#091410;padding:2rem 6rem;display:flex;align-items:center;just
   document.addEventListener('mousemove',e=>{const g=document.getElementById('cg');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
   const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*75);obs.unobserve(e.target)}});},{threshold:.1});
   document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
-  document.querySelectorAll('.skill-bar').forEach(el=>{new IntersectionObserver(e=>{if(e[0].isIntersecting){el.classList.add('on');}},{threshold:.3}).observe(el)});
+  document.querySelectorAll('.skill-track').forEach(tr=>{const bar=tr.querySelector('.skill-bar');if(!bar)return;const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){bar.classList.add('on');io.disconnect();}},{threshold:0});io.observe(tr)});
+  setTimeout(()=>document.querySelectorAll('.skill-bar').forEach(b=>b.classList.add('on')),3000);
   
 </script>
 </body>
